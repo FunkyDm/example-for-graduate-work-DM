@@ -5,8 +5,8 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Comments {
+public class AdsDTO {
     private Integer count;
-    private List<Comment> results;
+    private List<AdDTO> results;
 
 }

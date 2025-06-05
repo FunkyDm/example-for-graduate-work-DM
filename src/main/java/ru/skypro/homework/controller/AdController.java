@@ -2,9 +2,8 @@ package ru.skypro.homework.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.skypro.homework.dto.Ad;
-import ru.skypro.homework.dto.Ads;
-import ru.skypro.homework.dto.CreateOrUpdateAd;
+import ru.skypro.homework.dto.AdDTO;
+import ru.skypro.homework.dto.CreateOrUpdateAdDTO;
 
 @RestController
 @RequestMapping("/ads")
@@ -15,7 +14,7 @@ public class AdController {
     }
 
     @PostMapping
-    public ResponseEntity<?> postAdd(@RequestBody Ad ad) {
+    public ResponseEntity<?> postAdd(@RequestBody AdDTO adDTO) {
         return ResponseEntity.ok().build();
     }
 
@@ -31,7 +30,7 @@ public class AdController {
 
     @PatchMapping("/{id}")
     public ResponseEntity<?> updateAddInfo(@PathVariable Integer id,
-                                           @RequestBody CreateOrUpdateAd updateAd) {
+                                           @RequestBody CreateOrUpdateAdDTO updateAd) {
         return ResponseEntity.ok().build();
     }
 
