@@ -2,15 +2,15 @@ package ru.skypro.homework.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.skypro.homework.dto.NewPassword;
-import ru.skypro.homework.dto.UpdateUser;
+import ru.skypro.homework.dto.NewPasswordDTO;
+import ru.skypro.homework.dto.UpdateUserDTO;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
 
     @PostMapping("/set_password")
-    public ResponseEntity<?> updatePassword(@RequestBody NewPassword newPassword) {
+    public ResponseEntity<?> updatePassword(@RequestBody NewPasswordDTO newPasswordDTO) {
         return ResponseEntity.ok().build();
     }
 
@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PatchMapping("/me")
-    public ResponseEntity<?> updateAuthUserInfo(@RequestBody UpdateUser updateUser) {
+    public ResponseEntity<?> updateAuthUserInfo(@RequestBody UpdateUserDTO updateUserDTO) {
         return ResponseEntity.ok().build();
     }
 
