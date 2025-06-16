@@ -20,7 +20,7 @@ public class CommentEntity {
     @JoinColumn(name = "id")
     private UserEntity author;
 
-    private String image;
+    private String authorImage;
 
     private String authorFirstName;
 
